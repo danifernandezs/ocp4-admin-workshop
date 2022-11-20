@@ -14,3 +14,4 @@ This workshop is split into the following sections:
 - [Network Policies](07-network-policies/)
 - [Scaling an Application](08-scaling-apps/)
 - [Project Template](09-project-template/)
+- [Machine Config Pool](10-mcp/)
