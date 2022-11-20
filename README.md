@@ -7,3 +7,4 @@ This workshop is split into the following sections:
 
 - [Application Basics](01-application-basics/)
 - [Authentication and RBAC](02-oauth-rbac/)
+- [Nodes and Machines](03-mco/)
