@@ -53,7 +53,7 @@ Follow the logs of the Kubelet from the same node that you inspected for CPU and
 
 ````bash
 oc adm node-logs --tail 1 -u kubelet ip-10-0-137-166.eu-west-1.compute.internal
-----
+````
 
 Start a shell session to the same node that you previously used to inspect its OpenShift services and pods. Do not make any change to the node, such as stopping services or editing configuration files.
 
