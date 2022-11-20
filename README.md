@@ -16,3 +16,4 @@ This workshop is split into the following sections:
 - [Project Template](09-project-template/)
 - [Machine Config Pool](10-mcp/)
 - [Disabling Project Self-Provisioning](11-disable-project-autoprovision/)
+- [Cluster Logging](12-logging/)
