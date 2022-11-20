@@ -1,0 +1,42 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quotes
+spec:
+  selector:
+    matchLabels:
+      app: quotes
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: quotes
+    spec:
+      containers:
+        - name: quotes
+          image: quay.io/redhattraining/famous-quotes:2.1
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+          env:
+            - name: QUOTES_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: mysql
+                  key: database
+            - name: QUOTES_HOSTNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mysql
+                  key: hostname
+            - name: QUOTES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql
+                  key: password
+            - name: QUOTES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: mysql
+                  key: user
