@@ -11,3 +11,4 @@ This workshop is split into the following sections:
 - [Secrets](04-secrets/)
 - [Security Context Constraints](05-scc/)
 - [Ingress](06-ingress/)
+- [Network Policies](07-network-policies/)
