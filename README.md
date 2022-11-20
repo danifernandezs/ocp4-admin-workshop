@@ -9,3 +9,4 @@ This workshop is split into the following sections:
 - [Authentication and RBAC](02-oauth-rbac/)
 - [Nodes and Machines](03-mco/)
 - [Secrets](04-secrets/)
+- [Security Context Constraints](05-scc/)
