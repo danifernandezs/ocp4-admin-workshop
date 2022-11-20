@@ -12,3 +12,4 @@ This workshop is split into the following sections:
 - [Security Context Constraints](05-scc/)
 - [Ingress](06-ingress/)
 - [Network Policies](07-network-policies/)
+- [Scaling an Application](08-scaling-apps/)
