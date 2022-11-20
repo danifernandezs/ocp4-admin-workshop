@@ -24,7 +24,7 @@
     cat htpasswd
     ````
 
-  2. Create a secret that contains the HTPasswd users file.
+2. Create a secret that contains the HTPasswd users file.
 
     2.1. Create a secret from the /htpasswd file. To use the HTPasswd identity provider, you must define a secret with a key named htpasswd that contains the HTPasswd user file /htpasswd.
 
@@ -38,7 +38,7 @@
     oc adm policy add-cluster-role-to-user cluster-admin admin
     ````
 
-  3. Update the HTPasswd identity provider for the cluster so that your users can authenticate. Configure the custom resource file and update the cluster.
+3. Update the HTPasswd identity provider for the cluster so that your users can authenticate. Configure the custom resource file and update the cluster.
 
     3.1. Apply the custom resource defined in the previous step.
 
