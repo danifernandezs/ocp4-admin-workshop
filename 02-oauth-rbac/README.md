@@ -15,7 +15,7 @@
     1.2. Add the developer user with a password of developer to the htpasswd file.
 
     ````bash
-    htpasswd -b /htpasswd developer developer
+    htpasswd -b htpasswd developer developer
     ````
 
     1.3. Review the contents of the /htpasswd file and verify that it includes two entries with hashed passwords: one for the admin user and another for the developer user.
