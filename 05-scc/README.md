@@ -101,4 +101,4 @@ oc delete project authorization-scc
 ````
 
 ## Links
-* https://docs.openshift.com/container-platform/4.11/authentication/managing-security-context-constraints.html[Managing security context constraints]
+* [Managing security context constraints](https://docs.openshift.com/container-platform/4.11/authentication/managing-security-context-constraints.html)

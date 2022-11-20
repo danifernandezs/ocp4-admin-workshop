@@ -103,4 +103,4 @@ oc patch ingresscontroller/default -n openshift-ingress-operator --type json -p 
 
 ### Source Links
 
-* https://rcarrata.com/openshift/ocp4_route_sharding/[Deep dive of Route Sharding in OpenShift 4]
+* [Deep dive of Route Sharding in OpenShift 4](https://rcarrata.com/openshift/ocp4_route_sharding/)
