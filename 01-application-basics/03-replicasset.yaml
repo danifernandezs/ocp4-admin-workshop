@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: hello-replicaset
+  namespace: application-basics-cli
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello
+  template:
+    metadata:
+      name: hello
+      labels:
+        app: hello
+    spec:
+      containers:
+        - name: hello
+          image: quay.io/danielfernandez/ocp4-admin-workshop:v1
+          ports:
+            - containerPort: 8080

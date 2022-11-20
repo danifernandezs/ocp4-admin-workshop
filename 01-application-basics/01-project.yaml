@@ -1,0 +1,10 @@
+---
+kind: Project
+apiVersion: project.openshift.io/v1
+metadata:
+  name: application-basics-cli
+  annotations:
+    openshift.io/description: ''
+    openshift.io/display-name: ''
+    openshift.io/requester: 'dafernan'
+spec: {}

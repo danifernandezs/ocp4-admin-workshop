@@ -1,0 +1,15 @@
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: hello-route
+  namespace: application-basics-cli
+spec:
+  to:
+    kind: Service
+    name: hello
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  port:
+    targetPort: 8080

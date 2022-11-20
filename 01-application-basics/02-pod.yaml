@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-openshift-pod
+  labels:
+    app: hello
+  namespace: application-basics-cli
+spec:
+  containers:
+    - name: hello
+      image: 'quay.io/danielfernandez/ocp4-admin-workshop:v1'
+      ports:
+        - containerPort: 8080
