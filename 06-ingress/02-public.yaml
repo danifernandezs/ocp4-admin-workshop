@@ -1,0 +1,18 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: IngressController
+metadata:
+  name: public
+  namespace: openshift-ingress-operator
+spec:
+  endpointPublishingStrategy:
+    type: LoadBalancerService
+  replicas: 2
+  domain: public.example.com
+  nodePlacement:
+    nodeSelector:
+      matchLabels:
+        node-role.kubernetes.io/worker: ""
+  routeSelector:
+    matchLabels:
+      router: "public"

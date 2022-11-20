@@ -1,0 +1,20 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: IngressController
+metadata:
+  name: internal
+  namespace: openshift-ingress-operator
+spec:
+  endpointPublishingStrategy:
+    loadBalancer:
+      scope: Internal
+    type: LoadBalancerService
+  domain: internal.example.com
+  replicas: 2
+  nodePlacement:
+    nodeSelector:
+      matchLabels:
+        node-role.kubernetes.io/worker: ""
+  routeSelector:
+    matchLabels:
+      router: "internal"
