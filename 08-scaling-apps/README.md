@@ -65,6 +65,10 @@ Wait until the loadtest horizontal pod autoscaler reports usage in the TARGETS c
 oc get hpa/scale
 ````
 
+````
+watch "oc get po;oc adm top po --use-protocol-buffers;oc get hpa"
+````
+
 ### Clean Up
 
 ````
