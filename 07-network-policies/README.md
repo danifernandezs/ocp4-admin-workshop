@@ -142,3 +142,4 @@ oc delete project netproj-a netproj-b
 ## Links
 * https://github.com/ahmetb/kubernetes-network-policy-recipes[Kubernetes Network Policy Recipes]
 * https://rcarrata.com/openshift/egress-firewall/[Egress Firewall in OpenShift with OVN Kubernetes plugin]
+* https://editor.cilium.io/[Network policy online editor]
