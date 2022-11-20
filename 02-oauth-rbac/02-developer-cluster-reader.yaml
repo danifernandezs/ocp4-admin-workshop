@@ -1,0 +1,13 @@
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: developer-cluster-reader
+roleRef:
+  name: cluster-reader
+  kind: ClusterRole
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+  - kind: User
+    name: developer
+    apiGroup: rbac.authorization.k8s.io

@@ -45,3 +45,39 @@
     ````bash
     oc replace -f 01-oauth.yaml
     ````
+
+# RBAC lab
+
+## Developer as cluster reader
+
+````bash
+oc adm policy add-cluster-role-to-user cluster-reader developer
+````
+
+Check the permissions
+
+Deletting the assigned role
+
+````bash
+oc adm policy remove-cluster-role-from-user cluster-reader developer
+````
+
+## As project admin
+
+````bash
+oc adm policy add-role-to-user admin developer -n application-basics-cli
+````
+
+Check the permissions
+
+Deletting the assigned role
+
+````bash
+oc adm policy remove-role-from-user admin developer -n application-basics-cli
+````
+
+## Developer as cluster reader via yaml
+
+````bash
+oc create -f 02-developer-cluster-reader.yaml
+````
