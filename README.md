@@ -13,3 +13,4 @@ This workshop is split into the following sections:
 - [Ingress](06-ingress/)
 - [Network Policies](07-network-policies/)
 - [Scaling an Application](08-scaling-apps/)
+- [Project Template](09-project-template/)
