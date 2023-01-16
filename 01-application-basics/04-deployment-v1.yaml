@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: hello
-  replicas: 3
+  replicas: 5
   template:
     metadata:
       labels:
@@ -20,6 +20,14 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
+          securityContext:
+            capabilities:
+              drop:
+                - ALL
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            seccompProfile:
+              type: "RuntimeDefault"
   strategy:
     type: RollingUpdate
     rollingUpdate:
