@@ -26,6 +26,14 @@ spec:
             limits: 
               cpu: 50m
               memory: 20Mi
+          securityContext:
+            capabilities:
+              drop:
+                - ALL
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            seccompProfile:
+              type: "RuntimeDefault"
   strategy:
     type: RollingUpdate
     rollingUpdate:
