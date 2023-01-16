@@ -20,3 +20,11 @@ spec:
           image: quay.io/danielfernandez/ocp4-admin-workshop:v1
           ports:
             - containerPort: 8080
+          securityContext:
+            capabilities:
+              drop:
+                - ALL
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            seccompProfile:
+              type: "RuntimeDefault"
