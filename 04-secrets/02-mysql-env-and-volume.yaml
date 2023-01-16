@@ -40,6 +40,14 @@ spec:
                 secretKeyRef:
                   name: mysql
                   key: user
+          securityContext:
+            capabilities:
+              drop:
+                - ALL
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            seccompProfile:
+              type: "RuntimeDefault"
           volumeMounts:
             - name: mysql-volume
               mountPath: /run/secrets/mysql
