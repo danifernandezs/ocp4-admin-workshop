@@ -1,0 +1,39 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: sa-rbac
+  name: 'oc-tool'
+spec:
+  selector:
+    matchLabels:
+      app: hello
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      serviceAccountName: "openshift-tools"
+      serviceAccount: "openshift-tools"
+      containers:
+        - name: hello
+          image: registry.redhat.io/openshift4/ose-cli:v4.10
+          command:
+            - sh
+            - -c
+            - while true; do sleep 5 && echo Sleeping... ;done;
+          securityContext:
+            capabilities:
+              drop:
+                - ALL
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            seccompProfile:
+              type: "RuntimeDefault"
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  paused: false
